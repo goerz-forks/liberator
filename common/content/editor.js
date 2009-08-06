@@ -249,6 +249,10 @@ function Editor() //{{{
         "Set the external text editor",
         "string", "gvim -f");
 
+    options.add(["tmpext"],
+        "Set the extension of temporary files",
+        "string", ".tmp");
+
     options.add(["insertmode", "im"],
         "Use Insert mode as the default for text areas",
         "boolean", true);
@@ -945,8 +949,8 @@ function Editor() //{{{
                 // Errors are unlikely, and our error messages won't
                 // likely be any more helpful than that given in the
                 // exception.
-                liberator.echoerr(e);
-                tmpBg = "red";
+                //liberator.echoerr(e);
+                //tmpBg = "red";
             }
 
             // blink the textbox after returning

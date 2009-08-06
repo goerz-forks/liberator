@@ -704,7 +704,7 @@ function IO() //{{{
          */
         createTempFile: function ()
         {
-            let tmpName = EXTENSION_NAME + ".tmp";
+            let tmpName = EXTENSION_NAME + options["tmpext"];
 
             switch (EXTENSION_NAME)
             {
@@ -715,7 +715,7 @@ function IO() //{{{
                     try
                     {
                         if (window.content.document.location.hostname)
-                            tmpName = EXTENSION_NAME + "-" + window.content.document.location.hostname + ".tmp";
+                            tmpName = EXTENSION_NAME + "-" + window.content.document.location.hostname + options["tmpext"];
                     }
                     catch (e) {}
                     break;
